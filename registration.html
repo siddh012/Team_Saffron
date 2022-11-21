@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\IT Lounge\Desktop\HTML\fullwebsite\registration.css">
+    <title>Registration</title>
+</head>
+
+<body>
+    <form method="POST" name="google-sheet">
+        <center>
+            <div class="box text-center" text-align="center">
+                <p class="heading">
+                    <u> <i><h1>Registration</h1></i></u>
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="label text-center">
+                            <label>Enter Your Name:</label> <br>
+                            <input type="text" name="name" placeholder="Your Name"><br>
+                            <label>Enter Your E-mail id:</label> <br>
+                            <input type="email" name="email" placeholder="eg: xyz123@gmail.com"><br>
+                            <label>Enter Your Mobile no:</label> <br>
+                            <input type="number" id="fname" name="number" placeholder="Your number"><br>
+
+                            <label>Enter Your Aadhar number:</label> <br>
+                            <input type="number" name="addhar_number" placeholder="1111-2222-3333"><br>
+
+                            <label>Enter PAN:</label> <br>
+                            <input type="text" name="pan_number" placeholder="XYZ456312"><br>
+                            <label>Enter DOB:</label> <br>
+                            <input type="date" name="date" placeholder="02/01/2001"><br>
+
+                            <label>Create Your Password:</label> <br>
+                            <input type="password" name="password" placeholder="Your Password" id="myInput">
+                            <span class="eye" onclick="myFunction()">
+                                <i id="hide1" class="fa fa-eye"></i>
+                                <i id="hide2" class="fa fa-eye-slash"></i>
+                                
+                            </span>
+
+                            <br>
+                            <label>conform Password:</label> <br>
+                            <input type="password" name="password" placeholder="Your Password"><br>
+                            <label> Select Your Country</label>
+                            <select name="country">
+                        <option name="country"> 
+                            Your Country
+                        </option>
+                        <option> 
+                            India 
+                        </option>
+                        <option> 
+                            USA 
+                        </option>
+                        <option> 
+                            China 
+                        </option>
+                        <option> 
+                            Russia 
+                        </option>
+                        <option> 
+                            Japan 
+                        </option>
+                    </select> <br><br> <br>
+                            <!--<button type="submit"> SUBMIT</button> <br>-->
+                            <!-- <button>  <a href="file:///C:/Users/IT%20Lounge/Desktop/HTML/fullwebsite\success.html" input type="submit"> submit</a>
+                                </button> -->
+                            <input type="submit" value="Submit">
+
+                        </div> <br>
+                    </div> <br>
+                </div> <br>
+            </div> <br>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbz0w-QP8x8SJjJcBh-Ij7hRFjAsgzB9iQwt17jfX0ebZ3kwCeaKLxwHsilI8JD5wHsG/exec'
+                const form = document.forms['google-sheet']
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, {
+                            method: 'POST',
+                            body: new FormData(form)
+                        })
+                        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                        .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+
+
+            <!-- <script>
+                function AddRow() {
+                    var usernamee = document.getElementById("usernamee").value;
+                    var passwordd = document.getElementById("passwordd").value;
+                    var email = document.getElementById("email").value;
+                    var phone = document.getElementById("phone").value;
+                    if (usernamee == "" || passwordd == "" || email == "" || phone == "") {
+                        return false;
+                    } else {
+                        google.script.run.AddRecord(usernamee, passwordd, email, phone);
+                        document.getElementById("page2_id1").className = "page2_id1-off";
+                        document.getElementById("page3_id1").className = "page3_id1";
+                    }
+                }
+
+                function LoginUser() {
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    google.script.run.withSuccessHandler(function(output) {
+                        if (output == 'TRUE') {
+                            var url1 = 'http://www.google.com';
+
+                            var winRef = window.open(url1);
+                            winRef ? google.script.host.close() : window.onload = function() {
+                                document.getElementById('url').href = url1;
+                            }
+                        } else if (output == 'FALSE') {
+                            document.getElementById("errorMessage").innerHTML = "Invalid data";
+                        }
+                    }).checkLogin(username, password);
+                }
+
+                function function1() {
+                    document.getElementById("page1_id1").className = "page1_class1-off";
+                    document.getElementById("page2_id1").className = "page2_id1";
+                }
+
+                function function3() {
+                    document.getElementById("page3_id1").className = "page3_id1-off";
+                    document.getElementById("page1_id1").className = "page1_id1";
+                }
+            </script> -->
+        </center>
+    </form>
+
+</body>
+
+</html>

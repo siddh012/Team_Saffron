@@ -1,0 +1,169 @@
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.col-25 {
+    -ms-flex: 15%;
+    /* IE10 */
+    flex: 15%;
+}
+
+.col-50 {
+    -ms-flex: 20%;
+    /* IE10 */
+    flex: 20%;
+}
+
+.col-75 {
+    -ms-flex: 15%;
+    /* IE10 */
+    flex: 15%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 10px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/*--------------Payment like visa--------------*/
+
+.right {
+    flex-basis: 50%;
+}
+
+form {
+    padding: 1rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    color: #2c3e50;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0;
+    outline: none;
+}
+
+form input[type="number"] {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0;
+    outline: none;
+}
+
+
+/*------------------*--------------------*/
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+
+.btn {
+    background-color: #0e096d;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background-color: #4d42eb;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+body {
+    background: #223388;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(235, 226, 226) !important;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: '';
+    background: #f7f3f3;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+
+.box {
+    width: 50%;
+    padding: 100px;
+    margin: 250px auto;
+    background: rgb(62, 55, 199);
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+    transition: 0.05s;
+    box-shadow: 0 2px 20px #333;
+}
+
+.box .heading {
+    background: #f0f0f4;
+    border-radius: 7px 7px 0px 0px;
+    padding: 10px;
+    color: rgb(80, 53, 215);
+    text-align: center;
+    font-family: "Rubik";
+}
+
+.faqs {
+    padding: 10px 20px 20px;
+}
+
+::-webkit-details-marker {
+    float: left;
+    margin-top: 13px;
+}
